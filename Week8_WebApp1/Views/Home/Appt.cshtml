@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Appointment";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+}
+    </script>
+</head>
+<body>
+    <p>Please fill out this form to register your Pokemon for an appointment.</p>
+    <form name="myForm" action="@Url.Action("Success", "Home")"
+          onsubmit="return validateForm()" method="post">
+        First Name: <input type="text" name="fname"><br>
+        Last Name: <input type="text" name="lname"><br>
+        Pokemon Name: <input type="text" name="pname"><br>
+        Phone Number: <input type="number" name="phone"><br>
+        Describe your needs: <br \>
+<textarea name="message" rows="10" cols="30">
+</textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

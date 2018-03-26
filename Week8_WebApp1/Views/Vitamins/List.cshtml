@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Week8_WebApp1.Models.View.VitaminsViewModel>
+
+@{
+    ViewBag.Title = "Vitamins";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", new { userId = ViewBag.UserId })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.VitaminName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ServingSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AboutVitamin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefillDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.VitaminName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ServingSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AboutVitamin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RefillDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.VitId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VitId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VitId })
+        </td>
+    </tr>
+}
+
+</table>

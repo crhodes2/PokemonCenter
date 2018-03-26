@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<div class="jumbotron">
+    <h1><img src="~/Content/img/logo.png" class="rounded" alt="Logo"></h1>
+    <p class="lead">This is the Pokemon Center Web page. New patient can register to have their Pokemon checked-in</p>
+    <p><a href="@Url.Action("About", "Home")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <img src="~/Content/img/picture2.png" class="rounded" alt="Pokemon Center">
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Grooming</h2>
+        <p>
+            Our therapeutic grooming treatments help battle fleas, allergic dermatitis, and other challenging skin conditions.
+        </p>
+        <p><a class="btn btn-success" href="@Url.Action("Groom", "Home")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>General Health</h2>
+        <p>Wellness and senior Pokemon exams, ultrasound, x-ray, and dental cleanings are just a few of our general health services.</p>
+        <p><a class="btn btn-warning" href="@Url.Action("Health", "Home")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Pest Control</h2>
+        <p>Our pest control specialists are there 24/7. Schedule an appointment for a first time free check-up</p>
+        <p><a class="btn btn-info" href="@Url.Action("Pest", "Home")">Learn more &raquo;</a></p>
+    </div>
+</div>
